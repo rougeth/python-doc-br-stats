@@ -2,12 +2,13 @@ import os
 from urllib.parse import urljoin
 
 import requests
+from decouple import config
 
 
 # https://docs.transifex.com/api/
 TRANSIFEX_API_URL = "https://www.transifex.com/api/2/project/python-newest/"
 # https://www.transifex.com/user/settings/api/
-TRANSIFEX_API_TOKEN = os.environ.get("TRANSIFEX_API_TOKEN")
+TRANSIFEX_API_TOKEN = config("TRANSIFEX_API_TOKEN")
 
 PROJECT_NAME = "python-newest" # Lastest version of Python (Master branch on Github)
 REQUIRED_RESOURCES = ["bugs", "howto", "library"]
