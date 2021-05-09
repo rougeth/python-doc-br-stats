@@ -15,4 +15,4 @@ pyyaml = ">=4.2b1"
 requests = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.9"
